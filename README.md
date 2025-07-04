@@ -36,6 +36,34 @@ const value = await storage.getItem('key');
 console.log(value); // Outputs: 'value'
 ```
 
+## Configuration Options
+
+When initializing the cookies driver, you can pass an options object with the following properties:
+
+- **`prefix`**: A string to prepend to all cookie keys (default: "unstorage_")
+- **`maxAge`**: The maximum age of the cookie in seconds (default: 604800, which is 7 days)
+- **`path`**: The path for which the cookie is valid (default: "/")
+- **`domain`**: The domain for which the cookie is valid (default: "")
+- **`secure`**: A boolean indicating if the cookie should only be sent over HTTPS (default: false)
+- **`sameSite`**: The SameSite attribute of the cookie, can be "Strict", "Lax", or "None" (default: "Lax")
+
+Example with custom options:
+
+```javascript
+import { createStorage } from 'unstorage';
+import cookiesDriver from 'cookies-driver';
+
+const storage = createStorage({
+  driver: cookiesDriver({
+    prefix: 'myapp_',
+    maxAge: 60 * 60 * 24 * 30, // 30 days
+    path: '/',
+    secure: true,
+    sameSite: 'Strict'
+  })
+});
+```
+
 ## License
 
 MIT 

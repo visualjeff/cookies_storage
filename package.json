@@ -18,13 +18,15 @@
   ],
   "scripts": {
     "build": "tsup-node",
+    "lint": "npx oxlint -c oxlintrc.json",
     "pack": "npm pack"
   },
-  "keywords": ["unstorage", "cookies"],
+  "keywords": [
+    "unstorage",
+    "cookies"
+  ],
   "author": "Jeffrey Gilbert",
   "license": "MIT",
-  "dependencies": {
-  },
   "peerDependencies": {
     "unstorage": "^1.16.0"
   },
