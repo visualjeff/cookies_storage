@@ -9,4 +9,5 @@ export default defineConfig({
   target: 'node20',            // adjust based on your Node version
   splitting: false,            // disable code splitting for Node apps
   sourcemap: true,             // helpful for debugging
+  ignoreWatch: ['**/*.test.ts', '**/*.spec.ts'],
 });

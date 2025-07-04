@@ -3,14 +3,29 @@
   "version": "0.0.1",
   "description": "cookies driver for unstorage.unjs.io",
   "type": "module",
-  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "/dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "package.json"
+  ],
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "pack": "npm pack"
   },
   "keywords": ["unstorage", "cookies"],
   "author": "Jeffrey Gilbert",
   "license": "MIT",
   "dependencies": {
+  },
+  "peerDependencies": {
     "unstorage": "^1.16.0"
   },
   "devDependencies": {
