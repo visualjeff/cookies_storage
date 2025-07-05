@@ -19,7 +19,7 @@ interface CookieSetOptions {
   sameSite?: "Strict" | "Lax" | "None";
 }
 
-export default defineDriver((opts: CookieOptions = {}) => {
+export default defineDriver((opts: CookieOptions | undefined = undefined) => {
   const {
     prefix = "unstorage_",
     maxAge = 60 * 60 * 24 * 7, // 7 days default
@@ -27,7 +27,7 @@ export default defineDriver((opts: CookieOptions = {}) => {
     domain = "",
     secure = false,
     sameSite = "Lax"
-  } = opts;
+  } = opts || {};
 
   const makeKey = (key: string): string => prefix + key;
 

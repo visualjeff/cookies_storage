@@ -15,17 +15,17 @@ The cookies driver allows Unstorage to store and retrieve data using browser coo
 ## Installation
 
 ```bash
-npm install cookies-driver
+npm install cookies_driver
 ```
 
 ## Usage
 
 ```javascript
 import { createStorage } from 'unstorage';
-import cookiesDriver from 'cookies-driver';
+import cookiesDriver from 'cookies_driver';
 
 const storage = createStorage({
-  driver: cookiesDriver()
+  driver: cookiesDriver({})
 });
 
 // Store data
