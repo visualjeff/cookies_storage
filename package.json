@@ -1,6 +1,6 @@
 {
   "name": "cookies_driver",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cookies driver for unstorage.unjs.io",
   "type": "module",
   "types": "dist/index.d.ts",
